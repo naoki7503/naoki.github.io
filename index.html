@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta>ポートフォリオ</title>
+    <meta name="discription" content="サイトの概要文">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <!-- wow -->
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="./js/wow.min.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- original -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+<body class="drawer drawer--right">
+    <header class="header">
+        <div class="header_inner inner">
+            <h1 class="header_logo">ポートフォリオ</h1>
+            <button type="button" class="drawer-toggle drawer-hamburger is_sp">
+                <span class="sr-only">toggle navigation</span>
+                <span class="drawer-hamburger-icon"></span>
+            </button>
+            <nav class="drawer-nav">
+                <ul class="drawer-menu">
+                    <li class="header_item"><a class="header_link" href="#profile">プロフィール</a></li>
+                    <li class="drawer_item"><a class="drawer_link" href="#skill">スキル</a></li>
+                    <li class="drawer_item"><a class="drawer_link" href="#promise">お約束</a></li>
+                    <li class="drawer_item"><a class="drawer_link" href="#service">サービス内容</a></li>
+                    <li class="drawer_item"><a class="drawer_link" href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <nav class="header_nav">
+                <ul class="header_list">
+                    <li class="header_item"><a class="header_link" href="#profile">プロフィール</a></li>
+                    <li class="header_item"><a class="header_link" href="#skill">スキル</a></li>
+                    <li class="header_item"><a class="header_link" href="#promise">お約束</a></li>
+                    <li class="header_item"><a class="header_link" href="#service">サービス内容</a></li>
+                    <li class="header_item"><a class="header_link" href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="profile inner wow fadeIn" id="profile">
+        <div class="profile_img"></div>
+        <div class="profile_message">
+            <div class="profile_title">naoki</div>
+            <div class="profile_text">初めましてnaokiと申します。<br>クライアントに寄り添った<br>丁寧なコミュニケーションを常に心がけて、<br>最後まで責任をもって、<br>仕事に取り組ませていただきます。</div>
+        </div>
+    </div>
+
+    <section class="skill section wow fadeInUp" id="skill">
+        <div class="section_title">スキル</div>
+        <div class="skill_inner inner">
+            <ul class="skill_list">
+                <li class="skill_item wow fadeInUp">
+                    <a href="#" class="skill_link">
+                        <div class="skill_img"><img src="./img/HTML.png" alt=""></div>
+                        <div class="skill_text">SEOに配慮し、見やすく、後から編集しやすいコーディングが得意。</div>
+                    </a>
+                </li>
+                <li class="skill_item wow fadeInUp">
+                    <a href="#" class="skill_link">
+                        <div class="skill_img"><img src="./img/CSS.jpg" alt=""></div>
+                        <div class="skill_text">Sassを使い、後から編集しやすい綺麗なコーディング。</div>
+                    </a>
+                </li>
+                <li class="skill_item wow fadeInUp">
+                    <a href="#" class="skill_link">
+                        <div class="skill_img"><img src="./img/Javascript.jpg" alt=""></div>
+                        <div class="skill_text">Jqueryを用いて使いやすく居心地のいいサイト作り。</div>
+                    </a>
+                </li>
+                <li class="skill_item wow fadeInUp">
+                    <a href="#" class="skill_link">
+                        <div class="skill_img"><img src="./img/Wordpress.jpg" alt=""></div>
+                        <div class="skill_text">プラグインをもちいてSEOに最適なサイトを構築。</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="promise section wow fadeInUp" id="promise">
+        <div class="section_title">お約束</div>
+        <dl class="promise_dl">
+            <a href="#">
+                <div class="promise_row wow fadeInUp">
+                    <dt class="promise_dt"><img src="./img/clock-3179167_640.jpg" alt=""></dt>
+                    <div class="promise_dd">
+                        <div class="promise_title">納期は必ず守ります</div>
+                        <div class="promise_text">時間に対する厳しさには、人一倍厳しい自信があります。納期に間に合わないと判断した場合は、理由など説明しお断りします。</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="promise_row wow fadeInUp">
+                    <dt class="promise_dt"><img src="./img/checklist-2589418_640.jpg" alt=""></dt>
+                    <div class="promise_dd">
+                        <div class="promise_title">入念なチェック、テストを行い納品します</div>
+                        <div class="promise_text">スマホ表示でレイアウトが崩れる、ページ読み込み速度がやけに遅い、画像が正しく表示されない、納品後このような事が起こらないように、入念なチェック、テストを行い納品します。</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="promise_row wow fadeInUp">
+                    <dt class="promise_dt"><img src="./img/hands-820272_640.jpg" alt=""></dt>
+                    <div class="promise_dd">
+                        <div class="promise_title">先を見据えて制作します</div>
+                        <div class="promise_text">製作開始から終わりまで丁寧にコーディングをします。後から編集したいところがあった場合でも迅速に対応できるように心がけます。またSEOに特化したコーディングをすることでサイトを公開してからも検索されやすくします。</div>
+                    </div>
+                </div>
+            </a>
+        </dl>
+    </section>
+
+    <section class="service section" id="service">
+        <div class="section_title">サービス内容</div>
+        <ul class="service_list inner wow fadeInUp">
+            <li class="service_item wow fadeInUp">
+                <a href="#" class="service_link">
+                    <div class="service_img"><img src="./img/pencil.png" alt=""></div>
+                    <div class="service_text"><span>【コーディング】</span>LPやコーポレートサイト、ブログなどのデザインカンプからのコーディンを行います。(レスポンシブ対応可)</div>
+                    <div class="service_price">¥10,000~/1ページ</div>
+                </a>
+            </li>
+            <li class="service_item wow fadeInUp">
+                <a href="#" class="service_link">
+                    <div class="service_img"><img src="./img/wordpress2.jpg" alt=""></div>
+                    <div class="service_text"><span>【wordpress化】</span>コーディンされたサイトをwordpressで投稿、編集、閲覧できるようにphpで編集します。プラグインを入れて後はお客様がサーバーをレンタル、ドメインを取得するだけの状態にもっていきます。</div>
+                    <div class="service_price">¥10,000~/1ページ</div>
+                </a>
+            </li>
+            <li class="service_item wow fadeInUp">
+                <a href="#" class="service_link">
+                    <div class="service_img"><img src="./img/desktop.png" alt=""></div>
+                    <div class="service_text"><span>【サイト運用代行】</span>wordpress化されたサイトをサーバーをレンタル、ドメインを取得して公開します。seo対策をして検索で上位をとれるように編集します。</div>
+                    <div class="service_price">￥1,0000~</div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="contact section inner" id="contact">
+        <div class="section_title is_blue wow fadeInUp">お問い合わせ</div>
+        <form id="js-form" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeTNzHInSVTzT9tzBs1nJuHxRai6WttZt0DX_j8mQ58WjyS_Q/formResponse" class="contact_form wow fadeInUp">
+            <div class="contact_text"><span>＊</span>は入力必須項目です</div>
+            <dl class="contact_dl">
+                <div class="contact_row">
+                    <dt class="contact_dt">お名前<span>＊</span></dt>
+                    <dd class="contact_dd"><input type="text" name="entry.786035813" required></dd>
+                </div>
+                <div class="contact_row">
+                    <dt class="contact_dt">メールアドレス<span>＊</span></dt>
+                    <dd class="contact_dd"><input type="email" name="emailAddress" required></dd>
+                </div>
+                <div class="contact_row">
+                    <dt class="contact_dt">法人/個人の選択<span>＊</span></dt>
+                    <dd class="contact_dd">
+                        <div class="contact_radio_wrap">
+                            <label class="contact_radio">
+                                <input type="radio" name="entry.1021339904" class="contact_radio_input" value="法人" checked required>
+                                <span class="contact_radio_part">法人</span>
+                            </label>
+                            <label class="contact_radio">
+                                <input type="radio" name="entry.1021339904" class="contact_radio_input" value="個人" required>
+                                <span class="contact_radio_part">個人</span>
+                            </label>
+                        </div>
+                    </dd>
+                </div>
+                <div class="contact_row">
+                    <dt class="contact_dt">お問い合わせ内容<span>＊</span></dt>
+                    <dd class="contact_dd"><textarea name="entry.1837919151" required></textarea></dd>
+                </div>
+            </dl>
+            <div class="contact_footer">
+                <div class="contact_footer_text">
+                    <label class="contact_privacy">
+                        <input type="checkbox" name="entry.1355378439" class="contact_privacy_input"value="プライバシーポリシーの同意" required>
+                        <span class="contact_privacy_part"></span>
+                    </label>
+                    <a href="#" class="contact_privacy_link" target="_blank">プライバシーポリシー</a>に同意します。
+                </div>
+                <div class="footer_btn">
+                    <button id="js-submit" class="footer_btn_link -submit" type="submit" disabled>送信</button>
+                </div>
+            </div>
+        </form>
+        <div class="contact_message" id="js-success">
+            <p>送信完了しました。ありがとうございました。</p>
+        </div>
+        <div class="contact_message -error" id="js-error">
+            <p>送信に失敗しました。ページを更新して再度送信してください。</p>
+        </div>
+    </section>
+
+    <footer class="footer section">
+        <div class="footer_copyright">© 2020 naoki All rights reserved</div>
+    </footer>
+
+</body>
+</html>

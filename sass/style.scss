@@ -1,0 +1,577 @@
+@charset "utf-8";
+/*===================================
+# mixins
+====================================*/
+$breakpoints: ( 
+  'sm': 'screen and (max-width: 767px)', 
+  'md': 'screen and (min-width: 768px)', 
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@include mq(md){
+    .is_pc{ 
+       display: none;
+   }
+}
+
+@include mq(md){
+    .is_sp{ 
+       display: none;
+   }
+}
+
+/*===================================
+# 共通
+====================================*/
+$primary-color: #333333;
+$font-color: #333333;
+
+body{
+  font-size: 16px;
+  color: $font-color;
+  font-weight: 300;
+  line-height: (27/16);
+  font-family: "ヒラギノ明朝 ProN", serif;
+}
+
+.inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: content-box;
+
+  @include mq(sm) { 
+    padding: 0 15px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: $font-color;
+}
+
+img{
+  width: 100%;
+}
+
+.section{
+    margin-top: 130px;
+    padding-top: 30px;
+
+    @include mq(sm) { 
+        margin-top: 96px;
+        padding: 15px;
+    }
+}
+.section_title{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    padding-bottom: 16px;
+    margin-bottom: 64px;
+
+    @include mq(sm) { 
+        margin-top: 12px;
+        font-size: 30px;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        display: block;
+        width: 60px;
+        height: 1px;
+        background: $primary-color;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.section_btn{
+    margin-top: 48px;
+    text-align: center;
+}
+.section_btn_link{
+    display: inline-block;
+    height: 46px;
+    width: 157px;
+    line-height: 46px;
+    border: 1px solid #333333;
+    color: #333333;
+    font-weight: 600;
+    background: #fff;
+
+    &:hover{
+        color: #fff;
+        background: $primary-color;
+        border: $primary-color;
+    }
+}
+
+/*===================================
+# header
+====================================*/
+.header{
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 3px 15px rgba(96, 96, 96, 0.16);
+    height: 70px;
+}
+.header_inner{
+    display: flex;
+    align-items: center;
+}
+.header_logo{
+    font-size: 30px;
+    font-weight: bold;
+
+    @include mq(sm) { 
+        line-height: 70px;
+    }
+}
+.drawer_item{
+    height: 70px;
+}
+.drawer_link{
+    display: block;
+    height: 70px;
+    line-height: 70px;
+
+    &:hover{
+        font-weight: bold;
+    }
+}
+.header_nav{
+    margin-left: auto;
+}
+.header_list{
+    display: flex;
+
+    &:hover{
+        font-weight: bold;
+    }
+
+    @include mq(sm) { 
+        display: none;
+    }
+}
+.header_item{
+
+    &:not(:first-child){
+        margin-left: 48px;
+    }
+}
+.header_link{
+    display: block;
+    height: 70px;
+    line-height: 70px;
+}
+
+
+/*===================================
+# profile
+====================================*/
+.profile{
+    position: relative;
+    margin-top: 120px;
+
+    @include mq(sm) { 
+        margin-top: 120px;
+    }
+}
+.profile_img{
+    padding-top: 55%;
+    background: url(../img/keyboard-338505_1280.jpg) top right / 82.5% no-repeat;
+
+    @include mq(sm) { 
+        background: url(../img/keyboard-338505_640.jpg) center center / cover;
+        height: 400px;
+        padding: 0;
+        margin-bottom: 250px;
+    }
+    
+} 
+.profile_message{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 82px 44px 90px 40px;
+
+    @include mq(sm) { 
+        top: 100%;
+        transform: translateY(0);
+        padding: 0;
+        left: 20px;
+    }
+}
+.profile_title{
+    font-size: 26px;
+    font-weight: bold;
+}
+.profile_text{
+    margin-top: 18px;
+}
+
+/*===================================
+# skill
+====================================*/
+.skill_list{
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(sm) { 
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+.skill_item{
+    flex: 0 0 20%;
+    box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
+
+    @include mq(sm) { 
+        flex: 0 0 45%;
+        
+        &:nth-child(n+2){
+            margin-top: 10px;
+        }
+    }
+
+    & + &{
+        margin-left: 10px;
+
+        @include mq(sm) { 
+            margin-left: 0;
+        }
+    }
+}
+.skill_text{
+    padding: 0 10px 5px 10px;
+    font-weight: bold;
+}
+
+/*===================================
+# promise
+====================================*/
+.promise{
+
+}
+.promise_dl{
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.promise_row{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 22px;
+
+    @include mq(sm) { 
+        display: block;
+    }
+}
+.promise_dt{
+    flex: 0 0 260px;
+}
+.promise_dd{
+    flex: 0 1 100%;
+    margin-left: 40px;
+
+    @include mq(sm) { 
+        margin: 0;
+    }
+
+}
+.promise_title{
+    font-size: 25px;
+    font-weight: 600;
+}
+.promise_text{
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: (24/14);
+    color: #888888;
+    font-weight: bold;
+}
+
+/*===================================
+# service
+====================================*/
+.service_list{
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+
+    @include mq(sm) { 
+        display: block;
+    }
+}
+.service_item{
+    flex: 0 0 27.6%;
+
+    @include mq(sm) { 
+        &+&{
+            margin-top: 20px;
+        }
+    }
+}
+.service_link{
+    display: block;
+    font-size: 14px;
+    color: $font-color;
+}
+.service_img{
+    
+}
+.service_text{
+    margin-top: 24px;
+
+    span{
+        font-weight: bold;
+    }
+}
+.service_price{
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*===================================
+# contact
+====================================*/
+.contact{
+
+}
+.contact_text{
+    font-size: 14px;
+    margin-bottom: 24px;
+    letter-spacing: .1em;
+    text-align: center;
+
+    span{
+        color: #E7728E;
+        font-size: 16px;
+    }
+}
+.contact_dl{
+    max-width: 510px;
+    margin: 0 auto;
+}
+.contact_row{
+    display: flex;
+
+    @include mq(sm) { 
+        display: block;
+    }
+
+    &+&{
+        margin-top: 32px;
+    }
+}
+.contact_dt{
+    background: #333333;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    flex: 0 1 100%;
+    position: relative;
+    text-align: center;
+
+    @include mq(sm) { 
+        margin-bottom: 8px;
+    }
+
+    span{
+        font-size: 12px;
+        color: #E7728E;
+        vertical-align: super;
+        line-height: 1;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -8px;
+        border-style: solid;
+        border-width: 20px 0 20px 8px;
+        border-color: transparent transparent transparent #333333;
+
+        @include mq(sm) { 
+            display: none;
+        }
+    }
+}
+.contact_dd{
+    margin-left: 18px;
+    flex: 0 0 320px;
+
+    @include mq(sm) { 
+        margin-left: 0;
+    }
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    font-size: 16px;
+    padding: .2em .5em;
+    border-radius: 2px;
+    box-shadow: 5px 6px 16px rgba(96, 96, 96, 0.16);
+}
+
+input[type="text"],
+input[type="email"]{
+    height: 40px;
+}
+
+textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+.contact_footer{
+    margin-top: 20px;
+}
+.contact_footer_text{
+    text-align: center;
+}
+.contact_privacy_link{
+    color: $primary-color;
+    text-decoration: underline;
+}
+
+// radio
+.contact_radio_wrap{
+    display: inline-flex;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    box-shadow: 5px 6px 16px rgba(96, 96, 96, 0.16);
+}
+.contact_radio{
+    position: relative;
+}
+.contact_radio_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    &:checked +  .contact_radio_part{
+        background: $primary-color;
+        color: #fff;
+        border-radius: 1px;
+    }
+
+    &:focus +  .contact_radio_part{
+        outline: -webkit-focus-ring-color auto 1px;
+    }
+}
+.contact_radio_part{
+    display: block;
+    background: #fff;
+    color: $primary-color;
+    height: 38px;
+    line-height: 38px;
+    width: 80px;
+    text-align: center;
+}
+
+.contact_privacy{
+    position: relative;
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact_privacy_part{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $primary-color;
+    background: #fff;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.contact_privacy_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    &:checked + .contact_privacy_part{
+        width: 10px;
+        border-top: 0;
+        border-left: 0;
+        background: transparent;
+        transform: rotate(45deg);
+        top: -5px;
+        left: 5px;
+    }
+
+    &:focus +  .contact_privacy_part{
+        outline: -webkit-focus-ring-color auto 1px;
+    }
+
+    &:checked:focus +  .contact_privacy_part{
+        outline: none;
+    }
+}
+.contact_message{
+    text-align: center;
+    margin-top: 60px;
+    display: none;
+
+    &.-error{
+        color: #f00;
+    }
+}
+
+.footer_btn{
+    margin-top: 48px;
+    text-align: center;
+}
+.footer_btn_link{
+    display: inline-block;
+    height: 46px;
+    width: 157px;
+    line-height: 46px;
+    border: 1px solid #333333;
+    color: #333333;
+    font-weight: 600;
+    background: #fff;
+
+    &.-active{
+        color: #fff;
+        background: $primary-color;
+    }
+}
+/*===================================
+# news
+====================================*/
+.footer{
+    background: #F7F7F7;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+.footer_copyright{
+    text-align: center;
+}
